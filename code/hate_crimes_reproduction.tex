@@ -204,7 +204,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, breakable, boxrule=0pt, frame hidden, sharp corners, enhanced, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
 
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
@@ -295,7 +295,7 @@ residents in the 10 days after November 8, 2016, as reported by SPLC.
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{plot\_usmap}\NormalTok{(}\AttributeTok{data =}\NormalTok{ hate\_crimes\_data, }\AttributeTok{values =} \StringTok{"hate\_crimes\_per\_100k\_splc"}\NormalTok{, }\AttributeTok{color =} \StringTok{"grey"}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{scale\_fill\_binned}\NormalTok{(}\AttributeTok{name =} \StringTok{"Hate Incidents per 100,000 residents in the 10 days after Nov. 8, 2016"}\NormalTok{, }\AttributeTok{label =}\NormalTok{ scales}\SpecialCharTok{::}\NormalTok{comma, }\AttributeTok{low =} \StringTok{"\#ffffff"}\NormalTok{, }\AttributeTok{high =} \StringTok{"\#00b37b"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{scale\_fill\_binned}\NormalTok{(}\AttributeTok{name =} \StringTok{"Hate incidents per 100,000 residents in the 10 days after Nov. 8, 2016"}\NormalTok{, }\AttributeTok{label =}\NormalTok{ scales}\SpecialCharTok{::}\NormalTok{comma, }\AttributeTok{low =} \StringTok{"\#ffffff"}\NormalTok{, }\AttributeTok{high =} \StringTok{"\#00b37b"}\NormalTok{) }\SpecialCharTok{+} 
   \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"top"}\NormalTok{) }\SpecialCharTok{+}
   \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Post{-}Election Hate Incidence Rates"}\NormalTok{,}
        \AttributeTok{subtitle =} \StringTok{"Source: Southern Poverty Law Center (SPLC)"}\NormalTok{)}

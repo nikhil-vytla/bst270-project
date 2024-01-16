@@ -47,7 +47,7 @@ write.csv(hate_crimes_data, file='../data/hate_crimes.csv', quote=FALSE, row.nam
 
 The first figure plots pre-election hate crime rates per 100,000 residents between 2010-2015 per data sourced from the FBI Uniform Crime Reporting Program.
 
-```{r pre-election-hate-crimes}
+```{r pre-election-hate-crimes, fig.width=10}
 plot_usmap(data = hate_crimes_data, values = "avg_hatecrimes_per_100k_fbi", color = "grey") + 
   scale_fill_continuous(name = "Average annual hate crimes per 100,000 residents, 2010-15", label = scales::comma, low = "white", high = "#ed4900") + 
   theme(legend.position = "top") +
@@ -59,9 +59,9 @@ plot_usmap(data = hate_crimes_data, values = "avg_hatecrimes_per_100k_fbi", colo
 
 The second figure plots post-election hate incidence rates per 100,000 residents in the 10 days after November 8, 2016, as reported by SPLC.
 
-```{r post-election-hate-incidences}
+```{r post-election-hate-incidences, fig.width=10}
 plot_usmap(data = hate_crimes_data, values = "hate_crimes_per_100k_splc", color = "grey") + 
-  scale_fill_binned(name = "Hate Incidents per 100,000 residents in the 10 days after Nov. 8, 2016", label = scales::comma, low = "#ffffff", high = "#00b37b") + 
+  scale_fill_binned(name = "Hate incidents per 100,000 residents in the 10 days after Nov. 8, 2016", label = scales::comma, low = "#ffffff", high = "#00b37b") + 
   theme(legend.position = "top") +
   labs(title = "Post-Election Hate Incidence Rates",
        subtitle = "Source: Southern Poverty Law Center (SPLC)")
